@@ -1,156 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Base styles for all screen sizes */
 #textblock {
-
   background-color: #210002;
-
   height: 100vh;
-
 }
-
- 
 
 #textblock-container {
-
   width: 50%;
-
   margin: 0 auto;
-
   padding-top: 70px;
-
 }
-
- 
 
 #textblock-title {
-
   color: #ffaf1b;
-
   font-size: 35px;
-
   font-weight: 600;
-
   font-family: "Anton";
-
 }
-
- 
 
 #textblock-content {
-
   color: #ffaf1b;
-
   font-size: 20px;
-
 }
-
- 
 
 #textblock-footer {
-
   color: #ffaf1b;
-
   font-size: 18px;
-
   font-weight: 400;
-
   position: fixed;
-
   width: 100%;
-
   bottom: 0px;
-
   justify-content:center;
-
   align-items:center;
-
   text-align:center;
-
   margin-bottom: 20px;
-
- 
-
 }
-
- 
 
 #textblock-jon {
-
   text-decoration: none;
-
   color: #ffaf1b;
-
   font-size: 15px;
-
   font-weight: 600;
-
 }
-
-
 
 .animation, .animation_layer {
-
-       height: 100vh;
-
+  height: 100vh;
 }
-
- 
 
 .animation {
-
   display: block;
-
-       position: relative;
-
-       z-index: 10;
-
+  position: relative;
+  z-index: 10;
 }
 
- 
-
 .animation_layer {
-
-       background-position: bottom center;
-
-       background-size: auto 500px;
-
-       background-repeat: repeat-x;
-
-       width: 100%;
-
-       position: absolute;
-       padding-top: 100px;
-
+  background-position: bottom center;
+  background-size: auto 500px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  padding-top: 100px;
 }
 
 .animation_layer.parallax {
-
-       position: fixed;
-
+  position: fixed;
 }
-
- 
 
 #one {
-
   background-image: url(./images/1.svg);
   background-size: contain;
-
 }
 
- 
-
 #two {
-
   background-image: url(./images/2.svg);
   background-size:contain;
 }
 
- 
-
 #three {
-
   background-image: url(./images/3.svg);
   background-size: contain;
 }
 
- 
+/* Styles for tablets (min-width: 768px) */
+@media only screen and (min-width: 768px) {
+  #textblock-container {
+    width: 70%;
+    padding-top: 100px;
+  }
+  #textblock-title {
+    font-size: 50px;
+  }
+  #textblock-content {
+    font-size: 20px;
+  }
+}
+
+/* Styles for mobile (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  #textblock-container {
+    width: 90%;
+    padding-top: 50px;
+  }
+  #textblock-title {
+    font-size: 30px;
+  }
+  #textblock-content {
+    font-size: 14px;
+  }
+}
